@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Copy, RefreshCw, Check } from 'lucide-react';
+import { v4 as uuidv4, v1 as uuidv1 } from 'uuid';
 import SEO from '../../components/SEO';
 import AdPlaceholder from '../../components/AdPlaceholder';
 
@@ -16,22 +16,29 @@ const UUIDGenerator = () => {
 
     const baseKey = variant ? `tools.uuid_${variant}` : 'tools.uuid';
 
-    const generate = async () => {
+    const generate = () => {
         setLoading(true);
-        try {
-            const { data } = await axios.post('http://localhost:5000/api/generate/uuid', {
-                version
-            });
-            setUuid(data.result);
-            setCopied(false);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
+        // Simulate small delay for better UX
+        setTimeout(() => {
+            try {
+                const newUuid = version === 'v1' ? uuidv1() : uuidv4();
+                setUuid(newUuid);
+                setCopied(false);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        }, 200);
     };
 
+    // Generate on mount or version change
+    React.useEffect(() => {
+        generate();
+    }, [version]);
+
     const copyToClipboard = () => {
+        if (!uuid) return;
         navigator.clipboard.writeText(uuid);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -73,8 +80,8 @@ const UUIDGenerator = () => {
                         <button
                             onClick={() => setVersion('v4')}
                             className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${version === 'v4'
-                                    ? 'bg-white text-gray-900 shadow-sm'
-                                    : 'text-gray-500 hover:text-gray-700'
+                                ? 'bg-white text-gray-900 shadow-sm'
+                                : 'text-gray-500 hover:text-gray-700'
                                 }`}
                         >
                             UUID v4 (Random)
@@ -82,8 +89,8 @@ const UUIDGenerator = () => {
                         <button
                             onClick={() => setVersion('v1')}
                             className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${version === 'v1'
-                                    ? 'bg-white text-gray-900 shadow-sm'
-                                    : 'text-gray-500 hover:text-gray-700'
+                                ? 'bg-white text-gray-900 shadow-sm'
+                                : 'text-gray-500 hover:text-gray-700'
                                 }`}
                         >
                             UUID v1 (Timestamp)

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import QRCode from 'qrcode';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Download, RefreshCw, Wifi, QrCode, ArrowRight, Check } from 'lucide-react';
@@ -26,14 +26,28 @@ const QRCodeGenerator = () => {
         let payload = text;
 
         if (isWifi) {
-            payload = `WIFI:S:${wifiSsid};T:${wifiAuth};P:${wifiPass};;`;
+            // Escape special characters for WiFi string
+            const escape = (str) => str.replace(/([\\;,:])/g, '\\$1');
+            const ssid = escape(wifiSsid);
+            const pass = escape(wifiPass);
+            payload = `WIFI:S:${ssid};T:${wifiAuth};P:${pass};;`;
+        }
+
+        if (!payload) {
+            setLoading(false);
+            return;
         }
 
         try {
-            const { data } = await axios.post('http://localhost:5000/api/generate/qr-code', {
-                text: payload
+            const url = await QRCode.toDataURL(payload, {
+                width: 400,
+                margin: 2,
+                color: {
+                    dark: '#000000',
+                    light: '#ffffff'
+                }
             });
-            setQrImage(data.result);
+            setQrImage(url);
         } catch (error) {
             console.error(error);
         } finally {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import CryptoJS from 'crypto-js';
 import { useTranslation, Trans } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Copy, RefreshCw, Check, FileDigit } from 'lucide-react';
@@ -17,21 +17,37 @@ const HashGenerator = () => {
 
     const baseKey = variant ? `tools.hash_${variant}` : 'tools.hash';
 
-    const generate = async () => {
+    const generate = () => {
         if (!text) return;
         setLoading(true);
-        try {
-            const { data } = await axios.post('http://localhost:5000/api/generate/hash', {
-                text,
-                type
-            });
-            setHash(data.result);
-            setCopied(false);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
+        // Simulate async operation for UI consistent with other tools
+        setTimeout(() => {
+            try {
+                let result = '';
+                switch (type) {
+                    case 'MD5':
+                        result = CryptoJS.MD5(text).toString();
+                        break;
+                    case 'SHA1':
+                        result = CryptoJS.SHA1(text).toString();
+                        break;
+                    case 'SHA256':
+                        result = CryptoJS.SHA256(text).toString();
+                        break;
+                    case 'SHA512':
+                        result = CryptoJS.SHA512(text).toString();
+                        break;
+                    default:
+                        result = CryptoJS.SHA256(text).toString();
+                }
+                setHash(result);
+                setCopied(false);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        }, 100);
     };
 
     const copyToClipboard = () => {

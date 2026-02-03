@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useTranslation, Trans } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Copy, RefreshCw, Check } from 'lucide-react';
@@ -10,27 +9,55 @@ const PasswordGenerator = () => {
     const { t } = useTranslation();
     const { variant } = useParams();
     const [length, setLength] = useState(16);
-    const [options, setOptions] = useState({ numbers: true, symbols: true });
+    const [options, setOptions] = useState({
+        uppercase: true,
+        lowercase: true,
+        numbers: true,
+        symbols: true
+    });
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [copied, setCopied] = useState(false);
 
     const baseKey = variant ? `tools.password_${variant}` : 'tools.password';
 
-    const generate = async () => {
+    const generate = () => {
         setLoading(true);
-        try {
-            const { data } = await axios.post('http://localhost:5000/api/generate/password', {
-                length,
-                ...options
-            });
-            setPassword(data.result);
-            setCopied(false);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
+        // Simulate processing time
+        setTimeout(() => {
+            try {
+                const charset = {
+                    uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                    lowercase: 'abcdefghijklmnopqrstuvwxyz',
+                    numbers: '0123456789',
+                    symbols: '!@#$%^&*()_+-=[]{}|;:,.<>?'
+                };
+
+                let chars = '';
+                if (options.uppercase) chars += charset.uppercase;
+                if (options.lowercase) chars += charset.lowercase;
+                if (options.numbers) chars += charset.numbers;
+                if (options.symbols) chars += charset.symbols;
+
+                // Fallback if nothing selected
+                if (chars === '') chars = charset.lowercase;
+
+                let result = '';
+                const randomValues = new Uint32Array(length);
+                window.crypto.getRandomValues(randomValues);
+
+                for (let i = 0; i < length; i++) {
+                    result += chars[randomValues[i] % chars.length];
+                }
+
+                setPassword(result);
+                setCopied(false);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        }, 150);
     };
 
     const copyToClipboard = () => {
@@ -75,7 +102,7 @@ const PasswordGenerator = () => {
                             className="bg-white rounded-2xl border-2 border-brand/20 p-6 md:p-8 text-3xl md:text-5xl font-mono font-bold text-gray-900 tracking-wider break-all shadow-sm hover:border-brand transition-colors cursor-pointer select-all flex items-center justify-center min-h-[5rem]"
                             onClick={copyToClipboard}
                         >
-                            {password}
+                            {password || '...'}
                         </div>
 
                         <button
