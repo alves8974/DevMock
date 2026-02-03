@@ -1,271 +1,300 @@
 {
     "seo": {
-        "title": "DevTools - Free Developer Tools",
-        "description": "Collection of free tools for developers: UUID Generator, Password Generator, QR Code and more."
+        "siteTitle": "DevMock - Geradores de Dados Gratuitos para Desenvolvedores",
+        "siteDescription": "Ferramentas online essenciais para desenvolvedores: Gerador de Senhas, UUIDs, QR Codes, Hashes, Lorem Ipsum, Cores Aleatórias e Identidades Falsas. Gratuito e privado."
     },
     "tools": {
         "uuid": {
-            "title": "Online UUID Generator - v4 (Random) & v1 (Timestamp)",
-            "description": "Free online UUID generator. Create Version 4 (Random) and Version 1 (Time-based/MAC) UUIDs in bulk. RFC 4122 compliant tool for developers.",
-            "h1": "Online UUID Generator",
-            "generate": "Generate UUIDs",
-            "version_opt": "UUID Version",
-            "quantity_opt": "Quantity",
-            "copied": "Copied!",
-            "copy_all": "Copy All",
+            "title": "Gerador de UUID Online - v4 (Aleatório) & v1 (Timestamp)",
+            "description": "Gerador de UUID online gratuito. Crie UUIDs Versão 4 (Aleatório) e Versão 1 (Baseado em Tempo/MAC) em massa. Ferramenta compatível com RFC 4122 para desenvolvedores.",
+            "h1": "Gerador de UUID Online",
+            "generate": "Gerar UUIDs",
+            "version_opt": "Versão do UUID",
+            "quantity_opt": "Quantidade",
+            "copied": "Copiado!",
+            "copy_all": "Copiar Tudo",
             "article": {
-                "title": "Online UUID Generator",
-                "p1": "**Universally Unique Identifiers (UUIDs)** are 128-bit numbers used to uniquely identify information in computer systems. They are a standard component in software architecture, allowing distributed systems to generate unique keys without significant coordination or a central authority. This tool generates fully compliant RFC 4122 UUIDs for use in databases, application logic, and testing environments.",
-                "h2_versions": "Understanding UUID Versions",
-                "p_versions": "While there are five versions of UUIDs, this tool focuses on the two most common. **Version 4 (Random)** is generated using random numbers and is perfect for primary keys where privacy is a concern, as it contains no information about the host machine. **Version 1 (Timestamp)** uses the current time and the MAC address of the device, making it useful for scenarios where you need sortable, time-ordered identifiers.",
-                "h2_collision": "The Probability of Collisions",
-                "p_collision": "One of the most common questions is about uniqueness. The theoretical probability of a collision (generating the same UUID twice) is astronomically low. You would need to generate billions of UUIDs per second for many years to reach a 50% probability of a single collision. This reliability makes them the industry standard for identifying resources in modern web applications and microservices.",
-                "h2_usecase": "Developer Use Cases",
-                "p_usecase": "UUIDs are ubiquitous in modern development. They are used as primary keys in databases (like PostgreSQL and MongoDB), transaction IDs in payment gateways, and session tokens in web applications. Having a quick, reliable online generator allows developers to instantly create valid IDs for mocking data, testing API endpoints, or manual database insertions."
+                "title": "Gerador de UUID Online",
+                "p1": "**Identificadores Únicos Universais (UUIDs)** são números de 128 bits usados para identificar informações de forma única em sistemas de computador. Eles são um componente padrão na arquitetura de software, permitindo que sistemas distribuídos gerem chaves únicas sem coordenação significativa ou uma autoridade central. Esta ferramenta gera UUIDs totalmente compatíveis com RFC 4122 para uso em bancos de dados, lógica de aplicação e ambientes de teste.",
+                "h2_versions": "Entendendo as Versões de UUID",
+                "p_versions": "Embora existam cinco versões de UUIDs, esta ferramenta foca nas duas mais comuns. **Versão 4 (Aleatório)** é gerada usando números aleatórios e é perfeita para chaves primárias onde a privacidade é uma preocupação, pois não contém informações sobre a máquina host. **Versão 1 (Timestamp)** usa o tempo atual e o endereço MAC do dispositivo, tornando-a útil para cenários onde você precisa de identificadores ordenáveis por tempo.",
+                "h2_collision": "A Probabilidade de Colisões",
+                "p_collision": "Uma das perguntas mais comuns é sobre a unicidade. A probabilidade teórica de uma colisão (gerar o mesmo UUID duas vezes) é astronomicamente baixa. Você precisaria gerar bilhões de UUIDs por segundo por muitos anos para atingir 50% de probabilidade de uma única colisão. Essa confiabilidade os torna o padrão da indústria para identificar recursos em aplicações web modernas e microsserviços.",
+                "h2_usecase": "Casos de Uso para Desenvolvedores",
+                "p_usecase": "UUIDs são onipresentes no desenvolvimento moderno. Eles são usados como chaves primárias em bancos de dados (como PostgreSQL e MongoDB), IDs de transação em gateways de pagamento e tokens de sessão em aplicações web. Ter um gerador online rápido e confiável permite que desenvolvedores criem instantaneamente IDs válidos para dados de mock, teste de endpoints de API ou inserções manuais no banco de dados."
             }
         },
         "password": {
-            "title": "Strong Password Generator - Secure & Random Online Tool",
-            "description": "Generate secure, highly random passwords instantly. Protect your accounts with high-entropy credentials using customizable length and character sets.",
-            "h1": "Strong Password Generator",
-            "length": "Password Length: <span class=\"text-emerald-400\">{{count}}</span>",
-            "include_numbers": "Include Numbers",
-            "include_symbols": "Include Symbols",
-            "generate": "Generate Secure Password",
+            "title": "Gerador de Senha Forte - Ferramenta Online Segura e Aleatória",
+            "description": "Gere senhas seguras e altamente aleatórias instantaneamente. Proteja suas contas com credenciais de alta entropia usando comprimento e conjuntos de caracteres personalizáveis.",
+            "h1": "Gerador de Senha Forte",
+            "length": "Tamanho da Senha: <span class=\"text-emerald-400\">{{count}}</span>",
+            "include_numbers": "Incluir Números",
+            "include_symbols": "Incluir Símbolos",
+            "generate": "Gerar Senha Segura",
             "article": {
-                "title": "Strong Password Generator",
-                "p1": "In the modern digital landscape, the security of your accounts relies heavily on the strength of your passwords. A **strong password generator** is an essential tool for creating complex credentials that are mathematically resistant to brute-force attacks and dictionary hacks. Unlike human-generated passwords, which often follow predictable patterns (like \"Password123\" or birthdates), machine-generated passwords maximize entropy, making them virtually impossible to guess.",
-                "h2_randomness": "Why Randomness Matters",
-                "p_randomness": "True security comes from unpredictability. This tool uses a **Cryptographically Secure Pseudo-Random Number Generator (CSPRNG)** to ensure that every character is selected without bias. This is critical for developers and system administrators who need to generate API keys, salts, or initial user passwords that cannot be reverse-engineered.",
-                "h2_custom": "Customizing for Compliance",
-                "p_custom": "Different systems have different requirements. You can easily adjust the password length (up to 64 characters) and toggle the inclusion of numbers and symbols. Whether you need a short alphanumeric code or a maximum-security 64-character string for a master key, this tool adapts to your specific security policies.",
-                "h2_privacy": "Client-Side Privacy",
-                "p_privacy": "Your security is our priority. All password generation happens locally in your browser (client-side). We do not store, transmit, or log any passwords generated by this tool. Once the page is refreshed, the generated data is gone forever, ensuring complete privacy for your sensitive credentials."
+                "title": "Gerador de Senha Forte",
+                "p1": "No cenário digital moderno, a segurança de suas contas depende muito da força de suas senhas. Um **gerador de senha forte** é uma ferramenta essencial para criar credenciais complexas que são matematicamente resistentes a ataques de força bruta e hacks de dicionário. Ao contrário das senhas geradas por humanos, que geralmente seguem padrões previsíveis (como 'Senha123' ou datas de nascimento), senhas geradas por máquina maximizam a entropia, tornando-as praticamente impossíveis de adivinhar.",
+                "h2_randomness": "Por que a Aleatoriedade Importa",
+                "p_randomness": "A verdadeira segurança vem da imprevisibilidade. Esta ferramenta usa um **Gerador de Números Pseudo-Aleatórios Criptograficamente Seguro (CSPRNG)** para garantir que cada caractere seja selecionado sem viés. Isso é crítico para desenvolvedores e administradores de sistema que precisam gerar chaves de API, salts ou senhas iniciais de usuário que não podem ser submetidas a engenharia reversa.",
+                "h2_custom": "Personalizando para Conformidade",
+                "p_custom": "Sistemas diferentes têm requisitos diferentes. Você pode ajustar facilmente o comprimento da senha (até 64 caracteres) e alternar a inclusão de números e símbolos. Se você precisa de um código alfanumérico curto ou uma string de segurança máxima de 64 caracteres para uma chave mestra, esta ferramenta se adapta às suas políticas de segurança específicas.",
+                "h2_privacy": "Privacidade no Cliente",
+                "p_privacy": "Sua segurança é nossa prioridade. Toda a geração de senhas acontece localmente no seu navegador (client-side). Nós não armazenamos, transmitimos ou registramos nenhuma senha gerada por esta ferramenta. Assim que a página é atualizada, os dados gerados desaparecem para sempre, garantindo total privacidade para suas credenciais sensíveis."
             }
         },
         "qrcode": {
-            "title": "Free QR Code Generator - Create URL, Text & WiFi Codes",
-            "description": "Create static QR codes for unlimited scanning. Generate codes for URLs, WiFi networks, and plain text. Download high-resolution PNGs instantly.",
-            "h1": "Free QR Code Generator",
-            "tab_text": "Text / URL",
-            "tab_wifi": "WiFi Config",
-            "placeholder_text": "Enter URL or Text here...",
-            "placeholder_ssid": "SSID (Network Name)",
-            "placeholder_pass": "Password",
-            "opt_nopass": "No Password",
-            "generate": "Generate QR Code",
-            "download": "Download PNG",
+            "title": "Gerador de QR Code Gratuito - Crie Códigos de URL, Texto e Wi-Fi",
+            "description": "Crie QR codes estáticos para escaneamento ilimitado. Gere códigos para URLs, redes WiFi e texto simples. Baixe PNGs de alta resolução instantaneamente.",
+            "h1": "Gerador de QR Code Gratuito",
+            "tab_text": "Texto / URL",
+            "tab_wifi": "Configuração Wi-Fi",
+            "placeholder_text": "Digite URL ou Texto aqui...",
+            "placeholder_ssid": "SSID (Nome da Rede)",
+            "placeholder_pass": "Senha",
+            "opt_nopass": "Sem Senha",
+            "generate": "Gerar QR Code",
+            "download": "Baixar PNG",
             "article": {
-                "title": "Free QR Code Generator",
-                "p1": "A **Quick Response (QR) codes** have become a universal bridge between the physical and digital worlds. This tool allows you to generate static QR codes instantly directly from your browser. Unlike dynamic codes offered by some services that expire or require a subscription, the codes generated here encode the data directly into the image. This means they will work forever, do not track users, and are completely free to use.",
-                "h2_versatile": "Versatile Data Types",
-                "p_versatile": "Our generator supports multiple data formats to suit your needs. You can encode **URLs** to direct users to your website or portfolio. You can create **WiFi codes** that allow guests to scan and connect to your network without typing complex passwords. You can even encode **plain text**, enabling you to share messages, serial numbers, or contact information offline.",
-                "h2_quality": "High-Quality Exports",
-                "p_quality": "Readability is key. The tool generates high-contrast, clean images optimized for scanning by all modern smartphones (iOS and Android). You can download the result as a high-resolution PNG file, perfect for printing on flyers, business cards, or product packaging without losing quality or becoming unreadable.",
-                "h2_privacy": "Privacy and Reliability",
-                "p_privacy": "Because these are static QR codes, the data is fixed and lives entirely within the square pattern of the image. No data is sent to a server for tracking or redirection. This ensures that your links go exactly where you intend them to, without third-party interference or the risk of link rot if a service provider goes offline."
+                "title": "Gerador de QR Code Gratuito",
+                "p1": "**Códigos de Resposta Rápida (QR)** tornaram-se uma ponte universal entre os mundos físico e digital. Esta ferramenta permite gerar QR codes estáticos instantaneamente direto do seu navegador. Ao contrário de códigos dinâmicos oferecidos por alguns serviços que expiram ou exigem assinatura, os códigos gerados aqui codificam os dados diretamente na imagem. Isso significa que eles funcionarão para sempre, não rastreiam usuários e são completamente gratuitos para usar.",
+                "h2_versatile": "Tipos de Dados Versáteis",
+                "p_versatile": "Nosso gerador suporta múltiplos formatos de dados para atender às suas necessidades. Você pode codificar **URLs** para direcionar usuários ao seu site ou portfólio. Você pode criar **códigos WiFi** que permitem que convidados escaneiem e se conectem à sua rede sem digitar senhas complexas. Você pode até codificar **texto simples**, permitindo compartilhar mensagens, números de série ou informações de contato offline.",
+                "h2_quality": "Exportações de Alta Qualidade",
+                "p_quality": "Legibilidade é a chave. A ferramenta gera imagens de alto contraste e limpas, otimizadas para escaneamento por todos os smartphones modernos (iOS e Android). Você pode baixar o resultado como um arquivo PNG de alta resolução, perfeito para imprimir em panfletos, cartões de visita ou embalagens de produtos sem perder qualidade ou tornar-se ilegível.",
+                "h2_privacy": "Privacidade e Confiabilidade",
+                "p_privacy": "Porque estes são QR codes estáticos, os dados são fixos e vivem inteiramente dentro do padrão quadrado da imagem. Nenhum dado é enviado a um servidor para rastreamento ou redirecionamento. Isso garante que seus links vão exatamente onde você pretende, sem interferência de terceiros ou risco de link quebrado se um provedor de serviço ficar offline."
             }
         },
         "hash": {
-            "title": "Online Hash Generator - Calculate MD5, SHA-256, SHA-512",
-            "description": "Generate cryptographic hashes from text strings. Secure online calculator for MD5, SHA-1, SHA-256, and SHA-512 algorithms. Verify data integrity.",
-            "h1": "Online Hash Generator",
-            "placeholder": "Enter text to hash...",
-            "generate": "Generate Hash",
-            "result_label": "{{type}} Hash",
+            "title": "Gerador de Hash Online - Calcule MD5, SHA-256, SHA-512",
+            "description": "Gere hashes criptográficos a partir de strings de texto. Calculadora online segura para algoritmos MD5, SHA-1, SHA-256 e SHA-512. Verifique a integridade de dados.",
+            "h1": "Gerador de Hash Online",
+            "placeholder": "Digite o texto para hash...",
+            "generate": "Gerar Hash",
+            "result_label": "Hash {{type}}",
             "article": {
-                "title": "Online Hash Generator",
-                "p1": "Cryptographic hash functions are the backbone of modern data security and integrity. This tool serves as a versatile online calculator, allowing you to convert any text input into a fixed-size string of characters, known as a checksum or hash. Supporting standard algorithms like **MD5**, **SHA-1**, **SHA-256**, and **SHA-512**, it provides developers and security researchers with a quick way to verify logic or generate test data.",
-                "h2_integrity": "Ensuring Data Integrity",
-                "p_integrity": "One of the primary uses of hashing is verification. By comparing the hash of a file or string against a known value, you can confirm that the data has not been altered or corrupted. This is commonly used in software distribution to verify that a downloaded file matches the original source, ensuring it hasn't been tampered with during transfer.",
-                "h2_algorithms": "Understanding Algorithms",
-                "p_algorithms": "Not all hashes are created equal. **MD5** and **SHA-1** are older algorithms; while fast and useful for non-security checksums, they are no longer recommended for storing secrets due to collision vulnerabilities. **SHA-256** and **SHA-512**, part of the SHA-2 family, offer significantly stronger security and are the industry standards for digital signatures, SSL certificates, and password hashing (when combined with salt).",
-                "h2_encryption": "One-Way Encryption",
-                "p_encryption": "It is important to understand that hashing is not encryption. It is a one-way process; you cannot reverse a hash to retrieve the original text. This property is what makes it ideal for storing password proofs (hashes) in databases. Even if the database is compromised, the actual passwords remain hidden, provided that strong, slow hashing algorithms are used."
+                "title": "Gerador de Hash Online",
+                "p1": "Funções de hash criptográfico são a espinha dorsal da segurança e integridade de dados modernas. Esta ferramenta serve como uma calculadora online versátil, permitindo converter qualquer entrada de texto em uma string de caracteres de tamanho fixo, conhecida como checksum ou hash. Suportando algoritmos padrão como **MD5**, **SHA-1**, **SHA-256** e **SHA-512**, ela fornece a desenvolvedores e pesquisadores de segurança uma maneira rápida de verificar lógica ou gerar dados de teste.",
+                "h2_integrity": "Garantindo a Integridade dos Dados",
+                "p_integrity": "Um dos usos primários do hashing é a verificação. Comparando o hash de um arquivo ou string com um valor conhecido, você pode confirmar que os dados não foram alterados ou corrompidos. Isso é comumente usado na distribuição de software para verificar se um arquivo baixado corresponde à fonte original, garantindo que não foi adulterado durante a transferência.",
+                "h2_algorithms": "Entendendo Algoritmos",
+                "p_algorithms": "Nem todos os hashes são criados iguais. **MD5** e **SHA-1** são algoritmos mais antigos; embora rápidos e úteis para checksums de não-segurança, não são mais recomendados para armazenar segredos devido a vulnerabilidades de colisão. **SHA-256** e **SHA-512**, parte da família SHA-2, oferecem segurança significativamente maior e são os padrões da indústria para assinaturas digitais, certificados SSL e hashing de senhas (quando combinados com salt).",
+                "h2_encryption": "Criptografia de Via Única",
+                "p_encryption": "É importante entender que hashing não é criptografia. É um processo de via única; você não pode reverter um hash para recuperar o texto original. Essa propriedade é o que o torna ideal para armazenar provas de senha (hashes) em bancos de dados. Mesmo que o banco de dados seja comprometido, as senhas reais permanecem ocultas, desde que algoritmos de hash fortes e lentos sejam usados."
             }
         },
         "password_api-key-generator": {
-            "title": "Random API Key Generator - Secure & Unique Tokens",
-            "description": "Generate secure, high-entropy API keys for your applications. Create random cryptographic tokens for authentication systems and secret management.",
-            "h1": "Random API Key Generator",
+            "title": "Gerador de Chave API Aleatória - Tokens Seguros e Únicos",
+            "description": "Gere chaves de API seguras e de alta entropia para suas aplicações. Crie tokens criptográficos aleatórios para sistemas de autenticação e gerenciamento de segredos.",
+            "h1": "Gerador de Chave API Aleatória",
             "article": {
-                "title": "Random API Key Generator",
-                "p1": "Developing authentication systems requires strong, unpredictable secrets. This **Random API Key Generator** is designed specifically for developers who need to issue secure access tokens, client secrets, or session identifiers. Unlike standard passwords, API keys often require a specific structure or length to ensure maximum security against collision and guessing attacks.",
-                "h2_randomness": "Why Randomness Matters",
-                "p_randomness": "By utilizing a cryptographically secure pseudo-random number generator (CSPRNG), this tool produces strings that are statistically random. This is crucial for maintaining the integrity of your API. A predictable key generation algorithm could allow attackers to reverse-engineer valid tokens, compromising your entire user base.",
-                "h2_custom": "Standardized Lengths",
-                "p_custom": "Use this tool to generate 64-character (512-bit) alphanumeric strings commonly used in OAuth implementations, JWT signing secrets, and service-to-service communication. All generation happens locally in your browser, so your generated secrets never touch our servers.",
-                "h2_privacy": "Secure & Private",
-                "p_privacy": "Your security is our priority. All generation happens locally in your browser (client-side). We do not store, transmit, or log any keys generated by this tool."
+                "title": "Gerador de Chave API Aleatória",
+                "p1": "Desenvolver sistemas de autenticação requer segredos fortes e imprevisíveis. Este **Gerador de Chave API Aleatória** é projetado especificamente para desenvolvedores que precisam emitir tokens de acesso seguros, segredos de cliente ou identificadores de sessão. Ao contrário de senhas padrão, chaves de API geralmente exigem uma estrutura ou comprimento específico para garantir segurança máxima contra ataques de colisão e adivinhação.",
+                "h2_randomness": "Por que a Aleatoriedade Importa",
+                "p_randomness": "Utilizando um gerador de números pseudo-aleatórios criptograficamente seguro (CSPRNG), esta ferramenta produz strings que são estatisticamente aleatórias. Isso é crucial para manter a integridade de sua API. Um algoritmo de geração de chave previsível poderia permitir que atacantes fizessem engenharia reversa de tokens válidos, comprometendo toda a sua base de usuários.",
+                "h2_custom": "Comprimentos Padronizados",
+                "p_custom": "Use esta ferramenta para gerar strings alfanuméricas de 64 caracteres (512 bits) comumente usadas em implementações OAuth, segredos de assinatura JWT e comunicação serviço-a-serviço. Toda a geração acontece localmente no seu navegador, então seus segredos gerados nunca tocam nossos servidores.",
+                "h2_privacy": "Seguro e Privado",
+                "p_privacy": "Sua segurança é nossa prioridade. Toda a geração acontece localmente no seu navegador (client-side). Nós não armazenamos, transmitimos ou registramos nenhuma chave gerada por esta ferramenta."
             }
         },
         "password_wifi-wpa2-generator": {
-            "title": "WPA2 Wi-Fi Password Generator - Max Security Keys",
-            "description": "Create uncrackable WPA2/WPA3 Wi-Fi passwords. Generate random 63-character keys to secure your home or office network against brute-force attacks.",
-            "h1": "WPA2 Wi-Fi Password Generator",
+            "title": "Gerador de Senha Wi-Fi WPA2 - Chaves de Segurança Máxima",
+            "description": "Crie senhas de Wi-Fi WPA2/WPA3 inquebráveis. Gere chaves aleatórias de 63 caracteres para proteger sua rede doméstica ou de escritório contra ataques de força bruta.",
+            "h1": "Gerador de Senha Wi-Fi WPA2",
             "article": {
-                "title": "WPA2 Wi-Fi Password Generator",
-                "p1": "Your wireless network is only as secure as its password. Default router passwords or simple phrases are primary targets for tools like Aircrack-ng or Hashcat. This **Wi-Fi Password Generator** helps you create the strongest possible protection for your network by leveraging the full capacity of the WPA2 and WPA3 protocols.",
-                "h2_randomness": "Maximum Security Length",
-                "p_randomness": "For maximum security, a WPA2 pre-shared key (PSK) can be up to 63 characters long. Using a full-length, random alphanumeric string drastically increases the computational power required to crack your network handshake, moving the time-to-crack from minutes to centuries.",
-                "h2_custom": "Immune to Dictionary Attacks",
-                "p_custom": "We recommend generating a long string including symbols and numbers. While typing it into your devices might be tedious once, the peace of mind knowing your network is immune to dictionary attacks is worth the effort. Perfect for securing corporate guest networks or high-value home setups.",
-                "h2_privacy": "Secure & Private",
-                "p_privacy": "Your security is our priority. All generation happens locally in your browser (client-side). We do not store, transmit, or log any passwords generated by this tool."
+                "title": "Gerador de Senha Wi-Fi WPA2",
+                "p1": "Sua rede sem fio é tão segura quanto sua senha. Senhas de roteador padrão ou frases simples são alvos primários para ferramentas como Aircrack-ng ou Hashcat. Este **Gerador de Senha Wi-Fi** ajuda você a criar a proteção mais forte possível para sua rede aproveitando a capacidade total dos protocolos WPA2 e WPA3.",
+                "h2_randomness": "Comprimento Máximo de Segurança",
+                "p_randomness": "Para segurança máxima, uma chave pré-compartilhada (PSK) WPA2 pode ter até 63 caracteres. Usar uma string alfanumérica aleatória de comprimento total aumenta drasticamente o poder computacional necessário para quebrar o handshake da sua rede, movendo o tempo para quebrar de minutos para séculos.",
+                "h2_custom": "Imune a Ataques de Dicionário",
+                "p_custom": "Recomendamos gerar uma string longa incluindo símbolos e números. Embora digitá-la em seus dispositivos possa ser tedioso uma vez, a tranquilidade de saber que sua rede é imune a ataques de dicionário vale o esforço. Perfeito para proteger redes de convidados corporativas ou configurações domésticas de alto valor.",
+                "h2_privacy": "Seguro e Privado",
+                "p_privacy": "Sua segurança é nossa prioridade. Toda a geração acontece localmente no seu navegador (client-side). Nós não armazenamos, transmitimos ou registramos nenhuma senha gerada por esta ferramenta."
             }
         },
         "password_high-entropy-string": {
-            "title": "High-Entropy String Generator - Random Data for Devs",
-            "description": "Generate high-entropy random strings for salt values, crypto seeds, and testing data. Pure client-side generation for maximum privacy.",
-            "h1": "High-Entropy String Generator",
+            "title": "Gerador de String de Alta Entropia - Dados Aleatórios para Devs",
+            "description": "Gere strings aleatórias de alta entropia para valores salt, sementes criptográficas e dados de teste. Geração puramente client-side para privacidade máxima.",
+            "h1": "Gerador de String de Alta Entropia",
             "article": {
-                "title": "High-Entropy String Generator",
-                "p1": "Entropy is a measure of randomness and unpredictability. In cryptography and software testing, you often need raw, unstructured data that follows no pattern. This **High-Entropy String Generator** allows you to produce character sequences that maximize Shannon entropy, ideal for seeding random number generators or creating unique database salts.",
-                "h2_randomness": "Avoiding Patterns",
-                "p_randomness": "Low-entropy strings are the enemy of security. If your 'random' values usually start with a letter or contain dictionary words, they are vulnerable to pattern analysis. This tool treats every character position as an independent event, drawing from a full set of ASCII characters to ensure uniform distribution.",
-                "h2_custom": "Fuzzing & Testing",
-                "p_custom": "Beyond security, this tool is excellent for 'fuzzing' or testing input validation. By feeding high-entropy, complex strings into your application's input fields, you can uncover edge cases and handling errors that normal user input wouldn't trigger.",
-                "h2_privacy": "Secure & Private",
-                "p_privacy": "Your security is our priority. All generation happens locally in your browser (client-side). We do not store, transmit, or log any strings generated by this tool."
+                "title": "Gerador de String de Alta Entropia",
+                "p1": "Entropia é uma medida de aleatoriedade e imprevisibilidade. Em criptografia e teste de software, você frequentemente precisa de dados brutos e não estruturados que não seguem nenhum padrão. Este **Gerador de String de Alta Entropia** permite produzir sequências de caracteres que maximizam a entropia de Shannon, ideal para semear geradores de números aleatórios ou criar salts únicos de banco de dados.",
+                "h2_randomness": "Evitando Padrões",
+                "p_randomness": "Strings de baixa entropia são inimigas da segurança. Se seus valores 'aleatórios' geralmente começam com uma letra ou contêm palavras de dicionário, eles são vulneráveis à análise de padrão. Esta ferramenta trata cada posição de caractere como um evento independente, extraindo de um conjunto completo de caracteres ASCII para garantir distribuição uniforme.",
+                "h2_custom": "Fuzzing e Testes",
+                "p_custom": "Além da segurança, esta ferramenta é excelente para 'fuzzing' ou teste de validação de entrada. Alimentando strings complexas e de alta entropia nos campos de entrada da sua aplicação, você pode descobrir casos extremos e erros de manipulação que a entrada normal do usuário não acionaria.",
+                "h2_privacy": "Seguro e Privado",
+                "p_privacy": "Sua segurança é nossa prioridade. Toda a geração acontece localmente no seu navegador (client-side). Nós não armazenamos, transmitimos ou registramos nenhuma string gerada por esta ferramenta."
             }
         },
         "uuid_bulk-generator": {
-            "title": "Bulk UUID Generator - Create 100+ UUIDs Instantly",
-            "description": "Generate thousands of UUIDs in a single click. Free bulk UUID generator tool for populating mock databases, CSVs, and testing large datasets.",
-            "h1": "Bulk UUID Generator",
+            "title": "Gerador de UUID em Massa - Crie 100+ UUIDs Instantaneamente",
+            "description": "Gere milhares de UUIDs em um único clique. Ferramenta gratuita de geração de UUID em massa para popular bancos de dados mock, CSVs e testar grandes conjuntos de dados.",
+            "h1": "Gerador de UUID em Massa",
             "article": {
-                "title": "Bulk UUID Generator",
-                "p1": "When setting up a new database or testing an application's scalability, generating identifiers one by one is inefficient. This **Bulk UUID Generator** streamlines the process, allowing you to create hundreds or thousands of universally unique identifiers effectively instantly.",
-                "h2_versions": "Efficient Generation",
-                "p_versions": "This tool applies the RFC 4122 standard to every single ID generated, ensuring that even in batch operations, the uniqueness guarantee holds true. This is particularly useful for developers populating seed data for SQL databases (like PostgreSQL `uuid` columns) or NoSQL document stores (like MongoDB `_id` fields).",
-                "h2_collision": "Easy Export",
-                "p_collision": "Simply specify the quantity you need, and copying the entire list to your clipboard. The output is formatted perfectly for pasting into JSON files, CSV spreadsheets, or SQL insert statements, saving you hours of manual script writing.",
-                "h2_usecase": "Developer Use Cases",
-                "p_usecase": "UUIDs are ubiquitous in modern development. They are used as primary keys in databases (like PostgreSQL and MongoDB), transaction IDs in payment gateways, and session tokens in web applications. Having a quick, reliable online generator allows developers to instantly create valid IDs for mocking data, testing API endpoints, or manual database insertions."
+                "title": "Gerador de UUID em Massa",
+                "p1": "Ao configurar um novo banco de dados ou testar a escalabilidade de uma aplicação, gerar identificadores um por um é ineficiente. Este **Gerador de UUID em Massa** agiliza o processo, permitindo que você crie centenas ou milhares de identificadores universalmente únicos efetivamente instantaneamente.",
+                "h2_versions": "Geração Eficiente",
+                "p_versions": "Esta ferramenta aplica o padrão RFC 4122 a cada ID gerado, garantindo que mesmo em operações em lote, a garantia de unicidade se mantenha. Isso é particularmente útil para desenvolvedores populando dados sementes para bancos de dados SQL (como colunas `uuid` PostgreSQL) ou armazenamentos de documentos NoSQL (como campos `_id` MongoDB).",
+                "h2_collision": "Exportação Fácil",
+                "p_collision": "Basta especificar a quantidade que você precisa e copiar a lista inteira para sua área de transferência. A saída é formatada perfeitamente para colar em arquivos JSON, planilhas CSV ou instruções de inserção SQL, economizando horas de escrita de script manual.",
+                "h2_usecase": "Casos de Uso para Desenvolvedores",
+                "p_usecase": "UUIDs são onipresentes no desenvolvimento moderno. Eles são usados como chaves primárias em bancos de dados (como PostgreSQL e MongoDB), IDs de transação em gateways de pagamento e tokens de sessão em aplicações web. Ter um gerador online rápido e confiável permite que desenvolvedores criem instantaneamente IDs válidos para dados de mock, teste de endpoints de API ou inserções manuais no banco de dados."
             }
         },
         "uuid_online-guid": {
-            "title": "Online GUID Generator - Microsoft Style Identifiers",
-            "description": "Create Microsoft GUIDs (Globally Unique Identifiers) online. Compatible with C#, .NET, and Windows Registry formats. Free and secure.",
-            "h1": "Online GUID Generator",
+            "title": "Gerador de GUID Online - Identificadores Estilo Microsoft",
+            "description": "Crie GUIDs Microsoft (Identificadores Globalmente Únicos) online. Compatível com formatos C#, .NET e Registro do Windows. Gratuito e seguro.",
+            "h1": "Gerador de GUID Online",
             "article": {
-                "title": "Online GUID Generator",
-                "p1": "In the Microsoft ecosystem, UUIDs are commonly referred to as **GUIDs (Globally Unique Identifiers)**. While the underlying 128-bit structure is the same as the standard UUID, the terminology and typical usage contexts often differ. This **Online GUID Generator** is tailored for .NET developers, Windows system administrators, and C# programmers.",
-                "h2_versions": "Microsoft Compatibility",
-                "p_versions": "Whether you are defining a `CLSID` for a COM component, setting up a unique identifier for a Windows Registry key, or creating primary keys for MS SQL Server, a reliable GUID source is essential. This tool guarantees compliance with standard GUID formatting, including the specific hyphen placement (8-4-4-4-12 representation).",
-                "h2_collision": "Safe for Production",
-                "p_collision": "Generate Version 4 (Random) GUIDs that are safe to use across all Windows versions and .NET frameworks without risk of collision. The random nature ensures they are unique globally, allowing for easy merging of databases.",
-                "h2_usecase": "Developer Use Cases",
-                "p_usecase": "UUIDs are ubiquitous in modern development. They are used as primary keys in databases (like PostgreSQL and MongoDB), transaction IDs in payment gateways, and session tokens in web applications. Having a quick, reliable online generator allows developers to instantly create valid IDs for mocking data, testing API endpoints, or manual database insertions."
+                "title": "Gerador de GUID Online",
+                "p1": "No ecossistema Microsoft, UUIDs são comumente referidos como **GUIDs (Identificadores Globalmente Únicos)**. Embora a estrutura subjacente de 128 bits seja a mesma do UUID padrão, a terminologia e contextos de uso típicos geralmente diferem. Este **Gerador de GUID Online** é adaptado para desenvolvedores .NET, administradores de sistema Windows e programadores C#.",
+                "h2_versions": "Compatibilidade Microsoft",
+                "p_versions": "Se você está definindo um `CLSID` para um componente COM, configurando um identificador único para uma chave de Registro do Windows ou criando chaves primárias para MS SQL Server, uma fonte confiável de GUID é essencial. Esta ferramenta garante conformidade com a formatação padrão de GUID, incluindo o posicionamento específico de hífen (representação 8-4-4-4-12).",
+                "h2_collision": "Seguro para Produção",
+                "p_collision": "Gere GUIDs Versão 4 (Aleatório) que são seguros para usar em todas as versões do Windows e frameworks .NET sem risco de colisão. A natureza aleatória garante que eles sejam únicos globalmente, permitindo fácil fusão de bancos de dados.",
+                "h2_usecase": "Casos de Uso para Desenvolvedores",
+                "p_usecase": "UUIDs são onipresentes no desenvolvimento moderno. Eles são usados como chaves primárias em bancos de dados (como PostgreSQL e MongoDB), IDs de transação em gateways de pagamento e tokens de sessão em aplicações web. Ter um gerador online rápido e confiável permite que desenvolvedores criem instantaneamente IDs válidos para dados de mock, teste de endpoints de API ou inserções manuais no banco de dados."
             }
         },
         "uuid_v4": {
-            "title": "UUID v4 Generator - Random RFC 4122 IDs",
-            "description": "Generate strictly random Version 4 UUIDs. RFC 4122 compliant identifiers based on chaos/random seeds for maximum anonymity.",
-            "h1": "Random UUID v4 Generator",
+            "title": "Gerador de UUID v4 - IDs Aleatórios RFC 4122",
+            "description": "Gere UUIDs Versão 4 estritamente aleatórios. Identificadores compatíveis com RFC 4122 baseados em sementes de caos/aleatórias para anonimato máximo.",
+            "h1": "Gerador de UUID v4 Aleatório",
             "article": {
-                "title": "Random UUID v4 Generator",
-                "p1": "**Version 4 UUIDs** are the industry standard for generic unique identifiers. Unlike Version 1, which incorporates the MAC address of the generating computer (potentially leaking privacy), v4 uses random or pseudo-random numbers for nearly all of its 128 bits. This **UUID v4 Generator** focuses exclusively on creating these privacy-preserving identifiers.",
-                "h2_versions": "RFC 4122 Compliance",
-                "p_versions": "The structure of a v4 UUID is defined by RFC 4122. It sets specific bits to indicate the version number (4) and the variant (IETF), leaving 122 bits for random data. This results in a total of 2^122 possible combinations—a number so large that the probability of a collision is effectively zero for all practical purposes.",
-                "h2_collision": "Anonymity First",
-                "p_collision": "Use v4 UUIDs for public-facing resource IDs, session tokens, or transaction references where you want to ensure uniqueness without revealing the time or location of generation.",
-                "h2_usecase": "Developer Use Cases",
-                "p_usecase": "UUIDs are ubiquitous in modern development. They are used as primary keys in databases (like PostgreSQL and MongoDB), transaction IDs in payment gateways, and session tokens in web applications. Having a quick, reliable online generator allows developers to instantly create valid IDs for mocking data, testing API endpoints, or manual database insertions."
+                "title": "Gerador de UUID v4 Aleatório",
+                "p1": "**UUIDs Versão 4** são o padrão da indústria para identificadores únicos genéricos. Ao contrário da Versão 1, que incorpora o endereço MAC do computador gerador (potencialmente vazando privacidade), o v4 usa números aleatórios ou pseudo-aleatórios para quase todos os seus 128 bits. Este **Gerador de UUID v4** foca exclusivamente na criação desses identificadores preservadores de privacidade.",
+                "h2_versions": "Conformidade RFC 4122",
+                "p_versions": "A estrutura de um UUID v4 é definida pela RFC 4122. Ela define bits específicos para indicar o número da versão (4) e a variante (IETF), deixando 122 bits para dados aleatórios. Isso resulta em um total de 2^122 combinações possíveis — um número tão grande que a probabilidade de uma colisão é efetivamente zero para todos os propósitos práticos.",
+                "h2_collision": "Anonimato Primeiro",
+                "p_collision": "Use UUIDs v4 para IDs de recursos voltados para o público, tokens de sessão ou referências de transação onde você deseja garantir unicidade sem revelar o tempo ou local de geração.",
+                "h2_usecase": "Casos de Uso para Desenvolvedores",
+                "p_usecase": "UUIDs são onipresentes no desenvolvimento moderno. Eles são usados como chaves primárias em bancos de dados (como PostgreSQL e MongoDB), IDs de transação em gateways de pagamento e tokens de sessão em aplicações web. Ter um gerador online rápido e confiável permite que desenvolvedores criem instantaneamente IDs válidos para dados de mock, teste de endpoints de API ou inserções manuais no banco de dados."
             }
         },
         "qrcode_wifi": {
-            "title": "WiFi QR Code Generator - Connect Without Passwords",
-            "description": "Create a QR code for your WiFi network. Allow guests to scan and connect instantly. Supports WPA, WPA2, and WEP networks.",
-            "h1": "WiFi QR Code Generator",
+            "title": "Gerador de QR Code Wi-Fi - Conecte Sem Senhas",
+            "description": "Crie um QR code para sua rede Wi-Fi. Permita que convidados escaneiem e conectem instantaneamente. Suporta redes WPA, WPA2 e WEP.",
+            "h1": "Gerador de QR Code Wi-Fi",
             "article": {
-                "title": "WiFi QR Code Generator",
-                "p1": "Sharing your home or office WiFi password can be a frustration. Spelling out complex keys often leads to errors. This **WiFi QR Code Generator** solves that problem by encoding your network credentials into a scannable image. Guests simply point their camera at the code, and their device prompts them to join the network automatically.",
-                "h2_versatile": "Standard Schema",
-                "p_versatile": "The logic follows the standard `WIFI:` string schema supported by Android and iOS. You can specify your SSID (network name), password, and encryption type (WPA/WPA2, WEP, or None). This is perfect for coffee shops, hotels, or simply for sticking on your fridge at home.",
-                "h2_quality": "High-Quality Exports",
-                "p_quality": "Readability is key. The tool generates high-contrast, clean images optimized for scanning by all modern smartphones (iOS and Android). You can download the result as a high-resolution PNG file, perfect for printing on flyers, business cards, or product packaging without losing quality or becoming unreadable.",
-                "h2_privacy": "Secure & Private",
-                "p_privacy": "Security is paramount: the QR code is generated locally in your browser. Your sensitive WiFi password is never sent to our servers, so you can generate these codes with complete peace of mind."
+                "title": "Gerador de QR Code Wi-Fi",
+                "p1": "Compartilhar sua senha de Wi-Fi de casa ou escritório pode ser uma frustração. Soletrar chaves complexas frequentemente leva a erros. Este **Gerador de QR Code Wi-Fi** resolve esse problema codificando suas credenciais de rede em uma imagem escaneável. Convidados simplesmente apontam a câmera para o código, e o dispositivo deles solicita que entrem na rede automaticamente.",
+                "h2_versatile": "Esquema Padrão",
+                "p_versatile": "A lógica segue o esquema padrão de string `WIFI:` suportado por Android e iOS. Você pode especificar seu SSID (nome da rede), senha e tipo de criptografia (WPA/WPA2, WEP ou Nenhum). Isso é perfeito para cafeterias, hotéis ou simplesmente para colar na geladeira de casa.",
+                "h2_quality": "Exportações de Alta Qualidade",
+                "p_quality": "Legibilidade é a chave. A ferramenta gera imagens de alto contraste e limpas, otimizadas para escaneamento por todos os smartphones modernos (iOS e Android). Você pode baixar o resultado como um arquivo PNG de alta resolução, perfeito para imprimir em panfletos, cartões de visita ou embalagens de produtos sem perder qualidade ou tornar-se ilegível.",
+                "h2_privacy": "Seguro e Privado",
+                "p_privacy": "Segurança é primordial: o QR code é gerado localmente no seu navegador. Sua senha sensível de Wi-Fi nunca é enviada aos nossos servidores, então você pode gerar esses códigos com total tranquilidade."
             }
         },
         "qrcode_url-converter": {
-            "title": "URL to QR Code Converter - Link to App/Website",
-            "description": "Convert any website URL into a scannable QR code. Create deep links for apps, social media, or marketing campaigns. Static and free.",
-            "h1": "URL to QR Code Converter",
+            "title": "Conversor de URL para QR Code - Link para App/Site",
+            "description": "Converta qualquer URL de site em um QR code escaneável. Crie deep links para apps, redes sociais ou campanhas de marketing. Estático e gratuito.",
+            "h1": "Conversor de URL para QR Code",
             "article": {
-                "title": "URL to QR Code Converter",
-                "p1": "In marketing and physical distribution, bridging the gap to digital content is crucial. This **URL to QR Code Converter** is the simplest way to turn any web link into a physical entry point. Whether it's a link to your restaurant menu, a download page for your app, or your LinkedIn profile, this tool creates a robust code ready for printing.",
-                "h2_versatile": "Static Codes",
-                "p_versatile": "This generator creates **static QR codes**. Unlike dynamic codes that rely on a redirect service (which can go down or start charging fees), a static code encodes the actual URL character-by-character. This means your code will function as long as your website exists, with zero dependencies on our service.",
-                "h2_quality": "High-Quality Exports",
-                "p_quality": "Optimized for short and long URLs alike, the tool ensures the error correction level is sufficient to be scanned even if printed on slightly textured paper or displayed on screens.",
-                "h2_privacy": "Secure & Private",
-                "p_privacy": "Because these are static QR codes, the data is fixed and lives entirely within the square pattern of the image. No data is sent to a server for tracking or redirection."
+                "title": "Conversor de URL para QR Code",
+                "p1": "Em marketing e distribuição física, preencher a lacuna para o conteúdo digital é crucial. Este **Conversor de URL para QR Code** é a maneira mais simples de transformar qualquer link da web em um ponto de entrada físico. Seja um link para o menu do seu restaurante, uma página de download para seu app ou seu perfil no LinkedIn, esta ferramenta cria um código robusto pronto para impressão.",
+                "h2_versatile": "Códigos Estáticos",
+                "p_versatile": "Este gerador cria **QR codes estáticos**. Ao contrário de códigos dinâmicos que dependem de um serviço de redirecionamento (que pode cair ou começar a cobrar taxas), um código estático codifica a URL real caractere por caractere. Isso significa que seu código funcionará enquanto seu site existir, com dependência zero do nosso serviço.",
+                "h2_quality": "Exportações de Alta Qualidade",
+                "p_quality": "Otimizado para URLs curtas e longas, a ferramenta garante que o nível de correção de erro seja suficiente para ser escaneado mesmo se impresso em papel levemente texturizado ou exibido em telas.",
+                "h2_privacy": "Seguro e Privado",
+                "p_privacy": "Porque estes são QR codes estáticos, os dados são fixos e vivem inteiramente dentro do padrão quadrado da imagem. Nenhum dado é enviado a um servidor para rastreamento ou redirecionamento."
             }
         },
         "qrcode_printable": {
-            "title": "Printable QR Code Maker - High Resolution PNG",
-            "description": "Generate high-resolution, print-ready QR codes. Ideal for flyers, business cards, and posters. Clean, sharp, and easy to scan.",
-            "h1": "Printable QR Code Maker",
+            "title": "Criador de QR Code para Impressão - PNG de Alta Resolução",
+            "description": "Gere QR codes prontos para impressão em alta resolução. Ideal para panfletos, cartões de visita e pôsteres. Limpo, nítido e fácil de escanear.",
+            "h1": "Criador de QR Code para Impressão",
             "article": {
-                "title": "Printable QR Code Maker",
-                "p1": "When printing QR codes on physical media like business cards, posters, or merchandise, quality is everything. A blurry or low-resolution code can frustrate users and hurt your brand. This **Printable QR Code Maker** focuses on delivering high-fidelity outputs suitable for professional printing.",
-                "h2_versatile": "Print Ready",
-                "p_versatile": "We generate large, crisp PNG files that maintain their sharpness when scaled. The high contrast ensures that even older smartphone cameras can pick up the pattern quickly. Ideal for marketing materials, packaging, and event signage.",
-                "h2_quality": "Standard Compliance",
-                "p_quality": "Before printing a large batch, we always recommend testing your code on multiple devices. Since these are standard ISO 18004 compliant codes, they are compatible with all standard barcode reading hardware and software ensuring a seamless experience for your end users.",
-                "h2_privacy": "Privacy and Reliability",
-                "p_privacy": "Because these are static QR codes, the data is fixed and lives entirely within the square pattern of the image. No data is sent to a server for tracking or redirection."
+                "title": "Criador de QR Code para Impressão",
+                "p1": "Ao imprimir QR codes em mídia física como cartões de visita, pôsteres ou mercadorias, qualidade é tudo. Um código borrado ou de baixa resolução pode frustrar usuários e prejudicar sua marca. Este **Criador de QR Code para Impressão** foca em entregar saídas de alta fidelidade adequadas para impressão profissional.",
+                "h2_versatile": "Pronto para Impressão",
+                "p_versatile": "Nós geramos arquivos PNG grandes e nítidos que mantêm sua nitidez quando escalados. O alto contraste garante que mesmo câmeras de smartphone mais antigas possam captar o padrão rapidamente. Ideal para materiais de marketing, embalagens e sinalização de eventos.",
+                "h2_quality": "Conformidade Padrão",
+                "p_quality": "Antes de imprimir um lote grande, sempre recomendamos testar seu código em múltiplos dispositivos. Como estes são códigos compatíveis com o padrão ISO 18004, são compatíveis com todos os hardwares e softwares de leitura de código de barras padrão, garantindo uma experiência perfeita para seus usuários finais.",
+                "h2_privacy": "Privacidade e Confiabilidade",
+                "p_privacy": "Porque estes são QR codes estáticos, os dados são fixos e vivem inteiramente dentro do padrão quadrado da imagem. Nenhum dado é enviado a um servidor para rastreamento ou redirecionamento."
             }
         },
         "hash_md5-calculator": {
-            "title": "MD5 Checksum Calculator - Verify File Integrity",
-            "description": "Calculate MD5 checksums for text strings online. Fast and simple tool to verify file integrity and generate fingerprints for data.",
-            "h1": "MD5 Checksum Calculator",
+            "title": "Calculadora de Checksum MD5 - Verificar Integridade de Arquivo",
+            "description": "Calcule checksums MD5 para strings de texto online. Ferramenta rápida e simples para verificar integridade de arquivo e gerar impressões digitais para dados.",
+            "h1": "Calculadora de Checksum MD5",
             "article": {
-                "title": "MD5 Checksum Calculator",
-                "p1": "The MD5 (Message Digest Algorithm 5) has been a staple in computing for decades. While no longer suitable for cryptographic security due to collision vulnerabilities, it remains the most popular standard for verifying file integrity. This **MD5 Checksum Calculator** allows you to quickly generate the 32-character hexadecimal fingerprint of any text string.",
-                "h2_integrity": "File Verification",
-                "p_integrity": "Usage is common in software distribution. Developers provide an MD5 hash alongside their software downloads. After downloading, a user can hash the file locally; if the hashes match perfectly, the file is identical to the original and has not been corrupted during download.",
-                "h2_algorithms": "Speed & Simplicity",
-                "p_algorithms": "This tool focuses on speed and simplicity, giving you the MD5 output instantly as you type. It is an excellent utility for developers debugging data transfers or verifying legacy system credentials.",
-                "h2_encryption": "One-Way Encryption",
-                "p_encryption": "It is important to understand that hashing is not encryption. It is a one-way process; you cannot reverse a hash to retrieve the original text."
+                "title": "Calculadora de Checksum MD5",
+                "p1": "O MD5 (Algoritmo de Digestão de Mensagem 5) tem sido um marco na computação por décadas. Embora não seja mais adequado para segurança criptográfica devido a vulnerabilidades de colisão, continua sendo o padrão mais popular para verificar integridade de arquivo. Esta **Calculadora de Checksum MD5** permite que você gere rapidamente a impressão digital hexadecimal de 32 caracteres de qualquer string de texto.",
+                "h2_integrity": "Verificação de Arquivo",
+                "p_integrity": "O uso é comum na distribuição de software. Desenvolvedores fornecem um hash MD5 junto com seus downloads de software. Após baixar, um usuário pode fazer o hash do arquivo localmente; se os hashes corresponderem perfeitamente, o arquivo é idêntico ao original e não foi corrompido durante o download.",
+                "h2_algorithms": "Velocidade e Simplicidade",
+                "p_algorithms": "Esta ferramenta foca em velocidade e simplicidade, dando a você a saída MD5 instantaneamente enquanto você digita. É um excelente utilitário para desenvolvedores depurando transferências de dados ou verificando credenciais de sistemas legados.",
+                "h2_encryption": "Criptografia de Via Única",
+                "p_encryption": "É importante entender que hashing não é criptografia. É um processo de via única; você não pode reverter um hash para recuperar o texto original."
             }
         },
         "hash_sha256": {
-            "title": "SHA256 Generator - Secure SHA-2 Hashing",
-            "description": "Generate SHA-256 hashes online. Secure, standard SHA-2 algorithm for password hashing, digital signatures, and blockchain verification.",
-            "h1": "SHA256 Generator",
+            "title": "Gerador SHA256 - Hashing SHA-2 Seguro",
+            "description": "Gere hashes SHA-256 online. Algoritmo SHA-2 padrão e seguro para hashing de senhas, assinaturas digitais e verificação de blockchain.",
+            "h1": "Gerador SHA256",
             "article": {
-                "title": "SHA256 Generator",
-                "p1": "SHA-256 is part of the SHA-2 (Secure Hash Algorithm 2) family designed by the NSA. It is currently one of the most secure and widely used hashing algorithms in the world. This **SHA256 Generator** provides a reliable way to compute these 256-bit signatures directly in your browser.",
-                "h2_integrity": "Blockchain & Security",
-                "p_integrity": "Its uses are vast. SHA-256 is the fundamental cryptographic primitive underlying Bitcoin and much of the blockchain ecosystem. It is also the industry standard for SSL certificates and secure password storage (when properly salted).",
-                "h2_algorithms": "Collision Resistant",
-                "p_algorithms": "Unlike MD5 or SHA-1, SHA-256 has no known efficient collision attacks. This makes it safe for security-critical applications where ensuring that two different inputs never produce the same hash is vital. Use this tool to generate test vectors or verify security implementations.",
-                "h2_encryption": "One-Way Encryption",
-                "p_encryption": "It is important to understand that hashing is not encryption. It is a one-way process; you cannot reverse a hash to retrieve the original text."
+                "title": "Gerador SHA256",
+                "p1": "SHA-256 é parte da família SHA-2 (Algoritmo de Hash Seguro 2) projetada pela NSA. É atualmente um dos algoritmos de hash mais seguros e amplamente usados no mundo. Este **Gerador SHA256** fornece uma maneira confiável de computar essas assinaturas de 256 bits diretamente no seu navegador.",
+                "h2_integrity": "Blockchain e Segurança",
+                "p_integrity": "Seus usos são vastos. SHA-256 é a primitiva criptográfica fundamental subjacente ao Bitcoin e grande parte do ecossistema blockchain. Também é o padrão da indústria para certificados SSL e armazenamento seguro de senhas (quando devidamente salgadas).",
+                "h2_algorithms": "Resistente a Colisão",
+                "p_algorithms": "Ao contrário de MD5 ou SHA-1, SHA-256 não tem ataques de colisão eficientes conhecidos. Isso o torna seguro para aplicações críticas de segurança onde garantir que duas entradas diferentes nunca produzam o mesmo hash é vital. Use esta ferramenta para gerar vetores de teste ou verificar implementações de segurança.",
+                "h2_encryption": "Criptografia de Via Única",
+                "p_encryption": "É importante entender que hashing não é criptografia. É um processo de via única; você não pode reverter um hash para recuperar o texto original."
             }
         },
         "hash_checksum-verifier": {
-            "title": "Online Checksum Verifier - Validate Data Integrity",
-            "description": "Free online tool to verify checksums. Compare text against MD5, SHA1, and SHA256 hashes to detect corruption or tampering.",
-            "h1": "Online Checksum Verifier",
+            "title": "Verificador de Checksum Online - Validar Integridade de Dados",
+            "description": "Ferramenta online gratuita para verificar checksums. Compare texto com hashes MD5, SHA1 e SHA256 para detectar corrupção ou adulteração.",
+            "h1": "Verificador de Checksum Online",
             "article": {
-                "title": "Online Checksum Verifier",
-                "p1": "Data corruption can happen silently during storage or transmission. A single flipped bit can render a backup useless or a script dangerous. This **Online Checksum Verifier** is designed to help you validate data integrity by allowing you to manually compute and compare hash string values.",
-                "h2_integrity": "Detect Corruption",
-                "p_integrity": "By determining the 'digest' of your input text using various algorithms (MD5, SHA-1, SHA-256), you can cross-reference it with expected values. If the generated string matches your record, the data is intact.",
-                "h2_algorithms": "Multi-Algo Support",
-                "p_algorithms": "This tool is particularly useful for system administrators and developers who need to perform quick integrity checks without opening a command-line interface. It supports multiple algorithms simultaneously, listing them side-by-side for easy comparison.",
-                "h2_encryption": "One-Way Encryption",
-                "p_encryption": "It is important to understand that hashing is not encryption. It is a one-way process; you cannot reverse a hash to retrieve the original text."
+                "title": "Verificador de Checksum Online",
+                "p1": "Corrupção de dados pode acontecer silenciosamente durante armazenamento ou transmissão. Um único bit invertido pode tornar um backup inútil ou um script perigoso. Este **Verificador de Checksum Online** é projetado para ajudar você a validar a integridade dos dados permitindo computar e comparar valores de string de hash manualmente.",
+                "h2_integrity": "Detectar Corrupção",
+                "p_integrity": "Determinando o 'digest' do seu texto de entrada usando vários algoritmos (MD5, SHA-1, SHA-256), você pode cruzar referências com valores esperados. Se a string gerada corresponder ao seu registro, os dados estão intactos.",
+                "h2_algorithms": "Suporte Multi-Algo",
+                "p_algorithms": "Esta ferramenta é particularmente útil para administradores de sistema e desenvolvedores que precisam realizar verificações rápidas de integridade sem abrir uma interface de linha de comando. Ela suporta múltiplos algoritmos simultaneamente, listando-os lado a lado para fácil comparação.",
+                "h2_encryption": "Criptografia de Via Única",
+                "p_encryption": "É importante entender que hashing não é criptografia. É um processo de via única; você não pode reverter um hash para recuperar o texto original."
             }
+        },
+        "lorem": {
+            "title": "Gerador de Lorem Ipsum - Texto Simulado Gratuito",
+            "description": "Gerador de texto Lorem Ipsum gratuito. Crie parágrafos, frases ou palavras para preenchimento de layout.",
+            "h1": "Gerador de Lorem Ipsum",
+            "generate": "Gerar Texto",
+            "copy": "Copiar Texto"
+        },
+        "color": {
+            "title": "Gerador de Cores Aleatórias - Hex, RGB, HSL",
+            "description": "Gere paletas de cores aleatórias. Obtenha códigos Hex, RGB e HSL instantaneamente.",
+            "h1": "Gerador de Cores Aleatórias",
+            "generate": "Gerar Nova Cor"
+        },
+        "identity": {
+            "title": "Gerador de Identidade Falsa - Nome e Endereço",
+            "description": "Crie perfis de teste realistas com nome, endereço e e-mail. Útil para preenchimento de formulários e testes.",
+            "h1": "Gerador de Identidade Falsa",
+            "generate": "Gerar Nova Identidade"
+        },
+        "address": {
+            "title": "Gerador de Endereço Falso - EUA, Brasil, Europa",
+            "description": "Gere endereços falsos completos com rua, cidade, estado e CEP. Suporta vários países.",
+            "h1": "Gerador de Endereço Falso",
+            "generate": "Gerar Endereço"
         }
     },
     "footer": {
-        "rights": "All rights reserved. Made for developers."
+        "tagline": "Ferramentas geradoras de dados para desenvolvedores, gratuitas e de código aberto. Seguro, client-side e focado em privacidade.",
+        "security": "Ferramentas de Segurança",
+        "utility": "Ferramentas Utilitárias",
+        "data": "Ferramentas de Dados",
+        "rights": "Todos os direitos reservados."
     }
 }
