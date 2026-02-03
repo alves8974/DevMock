@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Copy, RefreshCw, MapPin, Globe, Check, ArrowRight } from 'lucide-react';
 import { fakerEN_US, fakerEN_CA, fakerEN_GB, fakerDE, fakerFR, fakerIT, fakerES, fakerNL, fakerPT_BR } from '@faker-js/faker';
+import { useTranslation } from 'react-i18next'; // Added import
 import SEO from '../../components/SEO';
 import AdPlaceholder from '../../components/AdPlaceholder';
 
 const AddressGenerator = () => {
+    const { t } = useTranslation(); // Added hook
     const [address, setAddress] = useState(null);
     const [loading, setLoading] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -155,7 +157,7 @@ const AddressGenerator = () => {
                                 className="w-full md:w-auto px-8 py-3 bg-brand hover:bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 h-[50px]"
                             >
                                 {loading ? <RefreshCw className="animate-spin w-5 h-5" /> : (
-                                    <>Generate Address <ArrowRight className="w-4 h-4 opacity-70" /></>
+                                    <>{t('tools.address.generate')} <ArrowRight className="w-4 h-4 opacity-70" /></>
                                 )}
                             </button>
                         </div>

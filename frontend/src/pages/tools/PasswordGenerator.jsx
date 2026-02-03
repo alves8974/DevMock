@@ -91,7 +91,7 @@ const PasswordGenerator = () => {
                             onClick={generate}
                             className="px-8 py-4 bg-brand hover:bg-blue-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/30 active:scale-[0.98] transition-all flex items-center gap-2"
                         >
-                            <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} /> Generate New
+                            <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} /> {t('tools.password.generate')}
                         </button>
                     </div>
                 </div>
