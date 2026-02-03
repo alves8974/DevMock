@@ -1,11 +1,18 @@
-import React from 'react';
-import { Link, useLocation, Outlet } from 'react-router-dom';
+import { Link, useLocation, Outlet, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Terminal, Shield, Github } from 'lucide-react';
+import { useEffect } from 'react';
 
 const Layout = ({ children }) => {
     const { t, i18n } = useTranslation();
     const location = useLocation();
+    const { lang } = useParams();
+
+    useEffect(() => {
+        if (lang && ['en', 'pt'].includes(lang) && i18n.language !== lang) {
+            i18n.changeLanguage(lang);
+        }
+    }, [lang, i18n]);
 
     // Helper to keep language prefix in links
     const getLink = (path) => {

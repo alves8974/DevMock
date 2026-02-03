@@ -1,57 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home -->
   <url>
-    <loc>https://devmock.com/</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://devmock.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devmock.com/en"/>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/password</loc>
-    <lastmod>2023-10-27</lastmod>
+    <loc>https://devmock.com/pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devmock.com/en"/>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Password Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/password"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/password"/>
+    <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devmock.com/tools/qr-code</loc>
-    <lastmod>2023-10-27</lastmod>
+    <loc>https://devmock.com/pt/tools/password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/password"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/password"/>
+    <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+  </url>
+
+  <!-- UUID Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/uuid</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/uuid"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/uuid"/>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/uuid</loc>
-    <lastmod>2023-10-27</lastmod>
+    <loc>https://devmock.com/pt/tools/uuid</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/uuid"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/uuid"/>
+    <priority>0.9</priority>
     <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- QR Code Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/qr-code</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/qr-code"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/qr-code"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/hash</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://devmock.com/pt/tools/qr-code</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/qr-code"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/qr-code"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Hash Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/hash</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/hash"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/hash"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/lorem</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://devmock.com/pt/tools/hash</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/hash"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/hash"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Lorem Ipsum -->
+  <url>
+    <loc>https://devmock.com/en/tools/lorem</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/lorem"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/lorem"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/color</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://devmock.com/pt/tools/lorem</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/lorem"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/lorem"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Color Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/color</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/color"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/color"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/identity</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://devmock.com/pt/tools/color</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/color"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/color"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Identity Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/identity</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/identity"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/identity"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://devmock.com/tools/address</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://devmock.com/pt/tools/identity</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/identity"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/identity"/>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Address Generator -->
+  <url>
+    <loc>https://devmock.com/en/tools/address</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/address"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/address"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://devmock.com/pt/tools/address</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/tools/address"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/tools/address"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Privacy -->
+  <url>
+    <loc>https://devmock.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/privacy"/>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://devmock.com/pt/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/privacy"/>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://devmock.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/terms"/>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://devmock.com/pt/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devmock.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://devmock.com/pt/terms"/>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
