@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  --color-brand: #0572ec;
+  --color-brand-dark: #031835;
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Layer directives are not strictly needed in v4 for basic @apply but usually ok */
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-brand text-white rounded-full font-semibold transition-all hover:bg-brand-dark shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed active:transform active:scale-95;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-xl border border-gray-100 p-8 transition-transform duration-300;
+  }
+
+  .input-premium {
+    @apply w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand transition-all text-lg font-mono;
+  }
+
+  /* Toggle Switch Styles */
+  .toggle-checkbox:checked {
+    @apply right-0 border-brand;
+  }
+
+  .toggle-checkbox:checked+.toggle-label {
+    @apply bg-brand;
+  }
+}
